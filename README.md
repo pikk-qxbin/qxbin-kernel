@@ -20,18 +20,16 @@ All without cryogenics or new silicon. Just better math running on what we have 
 
 ## Current Status (June 2026)
 
-**Phase 1 Simulations Complete** — Core trio ready:
-- Scheduler with fairness metrics + baseline + optional visualization
-- Memory probability matrices + eviction vs LRU
-- Power/thermal evolution vs threshold policy
+**Phase 1 Simulations Complete** with visualization:
+- Scheduler (fairness + baseline + plotting)
+- Memory (hit rate + baseline + plotting)
+- Power (energy/perf + baseline + plotting)
 
-All prototypes use shared reusable primitives and support multiple workload patterns.
+All three core kernel subsystems now have runnable prototypes with baseline comparison and optional matplotlib charts.
 
 ## Vision
 
-Change the mathematical language of the kernel. Move from deterministic heuristics to calibrated probability evolution. Bridge classical OS to hybrid quantum-classical future. Make advanced logic accessible at the edge (Pikkstops, kiosks, micro-enterprises).
-
-First principles: Question binary rigidity. Ship prototypes. Iterate in public. Accelerate progress for everyone.
+Change the mathematical language of the kernel. Move from deterministic heuristics to calibrated probability evolution. Bridge classical OS to hybrid quantum-classical future.
 
 ## Quick Start
 
@@ -39,41 +37,35 @@ First principles: Question binary rigidity. Ship prototypes. Iterate in public. 
 git clone https://github.com/pikk-qxbin/qxbin-kernel.git
 cd qxbin-kernel/prototypes
 
-# Scheduler (with optional plot)
+pip install matplotlib   # for visualization
+
+# Scheduler with chart
 python kernel_scheduler_sim.py --pattern bursty_ai --plot
 
-# Memory
-python memory_sim.py --pattern bursty
+# Memory with chart
+python memory_sim.py --pattern bursty --plot
 
-# Power
-python power_sim.py --pattern bursty
-```
-
-Install matplotlib for visualization:
-```bash
-pip install matplotlib
+# Power with chart
+python power_sim.py --pattern bursty --plot
 ```
 
 ## Repository Structure
 
-- `README.md` - This file
-- `DESIGN.md` - Detailed architecture, integration points, algorithms, challenges, roadmap
-- `ROADMAP.md` - Phased plan and current status
-- `prototypes/` - Runnable simulations (scheduler, memory, power)
+- `README.md`
+- `DESIGN.md`
+- `ROADMAP.md`
+- `prototypes/` — scheduler, memory, power (all with --plot)
 - `CONTRIBUTING.md` + issue templates
 
 ## How to Contribute
 
-Fork, run the prototypes, tweak workloads or biases, open issues with results or ideas.
+Run the prototypes, compare results, open issues with findings or ideas.
 
-All contributions MIT licensed (with 51% revenue share for commercial use — see LICENSE).
+MIT licensed with 51% revenue share for commercial use (see LICENSE).
 
 ## Links
 
 - Core QxBin: https://github.com/pikk-qxbin/qxbin
-- Framework site: https://www.pikk.co.in/chain-test
 - X: @rupeshmalpani
-
-"Moving past the cooling barrier isn't about better hardware. We just have to change the mathematical language we use to talk to the computer."
 
 Let's evolve the kernel. 🚀
