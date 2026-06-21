@@ -7,33 +7,36 @@
 - [x] Detailed DESIGN.md with C structs, integration points, and challenges
 - [x] Reusable Python primitives (`prototypes/qxbin_primitives.py`)
 - [x] Scheduler simulation prototype
+- [x] Memory management simulation prototype
+- [x] Power/thermal decision prototype
 - [x] Clear commercial licensing (51% revenue share for commercial use)
 
-## Phase 1: Simulation & Validation (Now — Next 2–4 weeks)
-- [ ] Enhance scheduler prototype with real workload traces + comparison to CFS
-- [ ] New memory management simulation prototype (page probability matrices)
-- [ ] Power/thermal decision prototype
-- [ ] Add metrics: Jain's fairness index, tail latency proxy, energy estimate
-- [ ] Benchmark suite (synthetic + real Linux traces)
+## Phase 1: Simulation & Validation (In Progress)
+- [x] Scheduler + baseline comparison (Jain's fairness, multiple patterns)
+- [x] Memory probability matrices + eviction vs LRU baseline
+- [x] Power/thermal evolution vs threshold policy
+- [ ] Add visualization / plotting to outputs
+- [ ] Integrated multi-subsystem simulation (scheduler + memory + power)
+- [ ] Run on real workload traces
 - [ ] Community feedback via issues
 
-## Phase 2: Safe Kernel Experimentation (1–3 months)
+## Phase 2: Safe Kernel Experimentation (Next)
 - [ ] eBPF-based advisor daemon (user-space QxBin + kernel telemetry)
 - [ ] Sysfs / debugfs interface for cubit state inspection
 - [ ] Per-CPU cubit state in a kernel module (prototype)
 - [ ] Safety analysis (determinism modes, attack surface)
 
-## Phase 3: In-Kernel Integration (3–6 months)
+## Phase 3: In-Kernel Integration (Future)
 - [ ] New `SCHED_QXBIN` scheduler class or extension to `fair_sched_class`
 - [ ] Probability-aware page replacement policy (mm/)
 - [ ] Integration points in power management and interrupt handling
 - [ ] Upstream discussion / RFC on LKML (after solid benchmarks)
 
-## Phase 4: Ecosystem & Hardware (6–12 months+)
+## Phase 4: Ecosystem & Hardware (Longer term)
 - [ ] Pikkstops / edge deployment experiments
 - [ ] Hardware acceleration hooks (use existing vector/SIMD or propose small matrix ops)
 - [ ] Hybrid classical + quantum co-processor interfaces
-- [ ] Educational materials + JEE-style conceptual depth for students
+- [ ] Educational materials + conceptual depth for students
 
 ## Guiding Principles
 - First principles: Change the mathematical language of the kernel.
@@ -43,11 +46,11 @@
 - Commercial clarity from day one (51% revenue share model).
 
 ## How to Help Right Now
-- Run and extend the prototypes
-- Open issues with workload ideas or benchmark suggestions
-- Prototype the memory or power modules
-- Review DESIGN.md and suggest improvements
+- Run the three prototypes (scheduler, memory, power) with different patterns
+- Compare QxBin vs baselines and share results in issues
+- Suggest new workload patterns or metrics
+- Prototype visualization or integrated simulation
 
-This roadmap is living. Update it as we learn.
+This roadmap is living. We just completed the core simulation trio in Phase 1.
 
 Let's make probabilistic kernels real. 🚀
