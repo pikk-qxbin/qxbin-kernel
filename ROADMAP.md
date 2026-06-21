@@ -6,17 +6,17 @@
 - [x] Public repo + vision
 - [x] Detailed DESIGN.md with C structs, integration points, and challenges
 - [x] Reusable Python primitives (`prototypes/qxbin_primitives.py`)
-- [x] Scheduler simulation prototype
+- [x] Scheduler simulation prototype (+ visualization support)
 - [x] Memory management simulation prototype
 - [x] Power/thermal decision prototype
 - [x] Clear commercial licensing (51% revenue share for commercial use)
 
 ## Phase 1: Simulation & Validation (In Progress)
-- [x] Scheduler + baseline comparison (Jain's fairness, multiple patterns)
+- [x] Scheduler + baseline + fairness metrics + plotting
 - [x] Memory probability matrices + eviction vs LRU baseline
 - [x] Power/thermal evolution vs threshold policy
-- [ ] Add visualization / plotting to outputs
-- [ ] Integrated multi-subsystem simulation (scheduler + memory + power)
+- [ ] Add visualization to memory and power prototypes
+- [ ] Integrated multi-subsystem simulation
 - [ ] Run on real workload traces
 - [ ] Community feedback via issues
 
@@ -46,11 +46,11 @@
 - Commercial clarity from day one (51% revenue share model).
 
 ## How to Help Right Now
-- Run the three prototypes (scheduler, memory, power) with different patterns
-- Compare QxBin vs baselines and share results in issues
-- Suggest new workload patterns or metrics
-- Prototype visualization or integrated simulation
+- Run the prototypes with `--plot` (scheduler) and different patterns
+- Compare QxBin vs baselines and share results
+- Help add visualization to memory and power
+- Suggest new metrics or workload generators
 
-This roadmap is living. We just completed the core simulation trio in Phase 1.
+We just added visualization to the scheduler. Momentum is high.
 
 Let's make probabilistic kernels real. 🚀
