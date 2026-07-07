@@ -6,6 +6,25 @@ Democratizing quantum-inspired decision-making for scheduling, memory, power, an
 
 Part of the [pikk-qxbin](https://github.com/pikk-qxbin/qxbin) ecosystem.
 
+## 🚀 QxBin v2.0 — Coordinate Power Recall (Just Landed)
+
+**New mathematical primitive** from the July 2026 notebook work:
+
+- Binary Signature Grids (your 2×2 I/0 patterns) → live Probability Clouds
+- **Coordinate Power Recall**: signed positive/negative power degrees along coordinates to steer and *recall* any target superposition
+- Replaces rigid matrix multiplication with steerable probability evolution
+- Exactly matches the 7-step flowchart and 3-layer hardware schematic we generated from the notes
+
+**File**: `v2/qxbin_v2_kernel.py`
+
+```bash
+python v2/qxbin_v2_kernel.py
+```
+
+This is the core engine that will feed the Probability ↔ Field Mapper and the room-temperature hardware prototype.
+
+---
+
 ## Current Best Demo
 
 **`prototypes/integrated_demo.py`** — The main showcase right now.
@@ -47,20 +66,22 @@ python prototypes/power_sim.py --plot
 
 ## What's in the Repo
 
+- `v2/qxbin_v2_kernel.py` — **NEW** QxBin v2.0 Coordinate Power Recall kernel
 - `prototypes/integrated_demo.py` — Main showcase (Scheduler + Memory + Power with trends)
-- `prototypes/qxbin_primitives.py` — Reusable core logic
+- `prototypes/qxbin_primitives.py` — Reusable core logic (v1 foundation)
 - Individual subsystem simulations (scheduler, memory, power)
 - `DESIGN.md` — Technical architecture and integration points
 - `ROADMAP.md` — Current status and future direction
 
-## Status (June 2026)
+## Status (July 2026)
 
 **Phase 1 (Simulation Layer)**: Complete
 - Reusable primitives
 - Three subsystem simulations with visualization
 - Integrated demo with trend tracking
+- **v2.0 Coordinate Power Recall kernel** (new mathematical primitive)
 
-**Next**: Move toward eBPF advisor and real kernel experimentation.
+**Next**: GPU/CUDA port of v2 kernel + Probability ↔ Field Mapper for hardware prototype.
 
 ## Vision
 
